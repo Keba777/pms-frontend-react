@@ -1,0 +1,43 @@
+import type { Equipment } from "./equipment";
+import type { LaborInformation } from "./laborInformation";
+import type { User } from "./user";
+
+export interface Kpi {
+    id: string;
+    type: 'Labor' | 'Machinery';
+    score: number;
+    status: 'Bad' | 'Good' | 'V.Good' | 'Excellent';
+    remark?: string;
+    userLaborId?: string;
+    userLabor?: User;
+    laborInfoId?: string;
+    laborInformation: LaborInformation;
+    equipmentId?: string;
+    equipment?: Equipment;
+    target?: number;
+    createdAt: Date;
+    updatedAt: Date;
+}
+
+export interface CreateKpiInput {
+    type: 'Labor' | 'Machinery';
+    score: number;
+    status: 'Bad' | 'Good' | 'V.Good' | 'Excellent';
+    remark?: string;
+    userLaborId?: string;
+    laborInfoId?: string;
+    equipmentId?: string;
+    target?: number;
+}
+
+export interface UpdateKpiInput {
+    id?: string;
+    type?: 'Labor' | 'Machinery';
+    score?: number;
+    status?: 'Bad' | 'Good' | 'V.Good' | 'Excellent';
+    remark?: string;
+    userLaborId?: string;
+    laborInfoId?: string;
+    equipmentId?: string;
+    target?: number;
+}

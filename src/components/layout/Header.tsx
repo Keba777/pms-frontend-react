@@ -1,0 +1,206 @@
+
+import { useState, useMemo } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { MenuIcon, Search, Bell, LogOut, User } from "lucide-react";
+import { useAuthStore } from "@/store/authStore";
+import userAvatar from "@/../public/images/user.png";
+
+import {
+  useNotifications,
+  useMarkAllAsRead,
+  useMarkAsRead,
+} from "@/hooks/useNotifications";
+import { useNotificationStore } from "@/store/notificationStore";
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+
+interface HeaderProps {
+  toggleSidebar: () => void;
+}
+
+const Header = ({ toggleSidebar }: HeaderProps) => {
+  const navigate = useNavigate();
+  const authState = useAuthStore();
+  const { user, logout } = useMemo(
+    () => ({
+      user: authState.user,
+      logout: authState.logout,
+    }),
+    [authState.user, authState.logout]
+  );
+
+  // notification hooks & store
+  const { data: notifications = [], isLoading } = useNotifications();
+  const unreadCount = useNotificationStore((s) => s.unreadCount);
+  const markAllAsReadMutation = useMarkAllAsRead();
+  const markAsReadMutation = useMarkAsRead();
+
+  // dropdown visibility
+  const [showNotifications, setShowNotifications] = useState(false);
+  const [searchOpen, setSearchOpen] = useState(false);
+
+  const handleLogout = () => {
+    logout();
+    navigate("/login");
+  };
+
+  return (
+    <nav className="w-full bg-white/95 backdrop-blur-sm shadow-sm rounded-lg px-4 py-3 sm:py-4">
+      <div className="flex items-center justify-between gap-4">
+        {/* Left: Menu toggle + Logo/Brand on mobile */}
+        <div className="flex items-center gap-4">
+          <Button
+            variant="ghost"
+            className="p-2 lg:hidden"
+            onClick={toggleSidebar}
+          >
+            <MenuIcon className="w-8 h-8 text-gray-600" />
+          </Button>
+          <span className="text-lg font-semibold text-gray-800 hidden sm:block">
+            Dashboard
+          </span>
+        </div>
+
+        {/* Center: Search - hidden on mobile, toggleable */}
+        <div className="hidden md:flex flex-1 max-w-md mx-4">
+          <Input
+            type="text"
+            placeholder="Search..."
+            className="w-full py-2 px-4 text-sm border-gray-200 focus:border-blue-500"
+          />
+        </div>
+
+        {/* Right: Icons */}
+        <div className="flex items-center gap-3 sm:gap-4">
+          {/* Mobile search toggle */}
+          <Button
+            variant="ghost"
+            className="p-2 md:hidden"
+            onClick={() => setSearchOpen(!searchOpen)}
+          >
+            <Search className="w-5 h-5 text-gray-600" />
+          </Button>
+
+          {/* Notifications */}
+          <DropdownMenu
+            open={showNotifications}
+            onOpenChange={setShowNotifications}
+          >
+            <DropdownMenuTrigger asChild>
+              <Button variant="ghost" className="p-2 relative">
+                <Bell className="w-8 h-8 text-gray-600" />
+                {unreadCount > 0 && (
+                  <span className="absolute top-0 right-0 bg-red-500 text-white text-xs rounded-full w-4 h-4 flex items-center justify-center">
+                    {unreadCount}
+                  </span>
+                )}
+              </Button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent align="end" className="w-80 p-0">
+              <DropdownMenuLabel className="flex justify-between items-center px-4 py-2">
+                Notifications
+                <Button
+                  variant="link"
+                  className="text-sm text-blue-600"
+                  onClick={() => markAllAsReadMutation.mutate()}
+                >
+                  Mark all as read
+                </Button>
+              </DropdownMenuLabel>
+              <DropdownMenuSeparator />
+              <div className="max-h-64 overflow-y-auto">
+                {isLoading ? (
+                  <p className="p-4 text-center text-sm text-gray-500">
+                    Loading...
+                  </p>
+                ) : notifications.length === 0 ? (
+                  <p className="p-4 text-center text-sm text-gray-500">
+                    No notifications
+                  </p>
+                ) : (
+                  notifications.map((n) => (
+                    <DropdownMenuItem
+                      key={n.id}
+                      className={`flex flex-col px-4 py-2 text-sm cursor-pointer ${n.read ? "" : "bg-blue-50"
+                        }`}
+                      onClick={() => markAsReadMutation.mutate(n.id!)}
+                    >
+                      <span className="truncate">{n.type}</span>
+                      <small className="text-xs text-gray-500">
+                        {new Date(n.createdAt!).toLocaleString()}
+                      </small>
+                    </DropdownMenuItem>
+                  ))
+                )}
+              </div>
+              <DropdownMenuSeparator />
+              <DropdownMenuItem asChild>
+                <Link
+                  to="/notifications"
+                  className="px-4 py-2 text-center font-medium block w-full"
+                >
+                  View All
+                </Link>
+              </DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
+
+          {/* User */}
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <Button variant="ghost" className="p-0">
+                <img
+                  src={
+                    user?.profile_picture ? user.profile_picture : userAvatar
+                  }
+                  alt="User Avatar"
+                  width={32}
+                  height={32}
+                  className="rounded-full w-8 h-8 object-cover"
+                />
+              </Button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent align="end" className="w-48">
+              <DropdownMenuLabel>Hi, {user?.first_name}</DropdownMenuLabel>
+              <DropdownMenuSeparator />
+              <DropdownMenuItem asChild>
+                <Link to="/profile" className="flex items-center w-full">
+                  <User className="w-4 h-4 mr-2" />
+                  Profile
+                </Link>
+              </DropdownMenuItem>
+              <DropdownMenuItem
+                onClick={handleLogout}
+                className="text-red-600 focus:text-red-700 cursor-pointer"
+              >
+                <LogOut className="w-4 h-4 mr-2" />
+                Logout
+              </DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
+        </div>
+      </div>
+
+      {/* Mobile search input */}
+      {searchOpen && (
+        <div className="mt-3 md:hidden">
+          <Input
+            type="text"
+            placeholder="Search..."
+            className="w-full py-2 px-4 text-sm border-gray-200 focus:border-blue-500"
+          />
+        </div>
+      )}
+    </nav>
+  );
+};
+
+export default Header;

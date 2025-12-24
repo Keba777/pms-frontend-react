@@ -1,0 +1,411 @@
+﻿src/components/activities/ActualActivityTable.tsx(6,27): error TS2307: Cannot find module 'next/navigation' or its corresponding type declarations.
+src/components/activities/ActualActivityTable.tsx(13,10): error TS1484: 'UpdateActivityInput' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/activities/ActualActivityTable.tsx(13,31): error TS1484: 'Activity' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/activities/ActualActivityTable.tsx(13,41): error TS1484: 'Actuals' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/activities/ActualActivityTable.tsx(17,18): error TS2307: Cannot find module 'next/link' or its corresponding type declarations.
+src/components/activities/ActualActivityTable.tsx(620,14): error TS2322: Type '{ children: string; jsx: true; global: true; }' is not assignable to type 'DetailedHTMLProps<StyleHTMLAttributes<HTMLStyleElement>, HTMLStyleElement>'.
+  Property 'jsx' does not exist on type 'DetailedHTMLProps<StyleHTMLAttributes<HTMLStyleElement>, HTMLStyleElement>'.
+src/components/activities/DataTableActivities.tsx(3,18): error TS2307: Cannot find module 'next/link' or its corresponding type declarations.
+src/components/activities/DataTableActivities.tsx(6,27): error TS2307: Cannot find module 'next/navigation' or its corresponding type declarations.
+src/components/activities/DataTableActivities.tsx(12,10): error TS1484: 'Activity' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/activities/DataTableActivities.tsx(12,20): error TS1484: 'UpdateActivityInput' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/activities/DataTableActivities.tsx(21,3): error TS1484: 'FilterField' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/activities/DataTableActivities.tsx(22,3): error TS1484: 'FilterValues' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/activities/DataTableActivities.tsx(24,3): error TS1484: 'Option' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/activities/EquipmentSheet.tsx(13,3): error TS1484: 'createEquipmentTimesheetInput' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/activities/EquipmentSheet.tsx(14,3): error TS1484: 'updateEquipmentTimesheetInput' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/activities/EquipmentSheet.tsx(15,3): error TS1484: 'EquipmentTimesheet' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/activities/KpiTable.tsx(3,8): error TS6133: 'React' is declared but its value is never read.
+src/components/activities/KpiTable.tsx(4,18): error TS2307: Cannot find module 'next/link' or its corresponding type declarations.
+src/components/activities/KpiTable.tsx(7,27): error TS2307: Cannot find module 'next/navigation' or its corresponding type declarations.
+src/components/activities/KpiTable.tsx(11,10): error TS1484: 'CreateKpiInput' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/activities/KpiTable.tsx(11,26): error TS1484: 'UpdateKpiInput' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/activities/KpiTable.tsx(11,42): error TS1484: 'Kpi' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/activities/LaborSheet.tsx(13,3): error TS1484: 'createLaborTimesheetInput' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/activities/LaborSheet.tsx(14,3): error TS1484: 'updateLaborTimesheetInput' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/activities/LaborSheet.tsx(15,3): error TS1484: 'LaborTimesheet' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/activities/MaterialSheet.tsx(13,3): error TS1484: 'createMaterialBalanceSheetInput' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/activities/MaterialSheet.tsx(14,3): error TS1484: 'updateMaterialBalanceSheetInput' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/activities/MaterialSheet.tsx(15,3): error TS1484: 'MaterialBalanceSheet' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/activities/WorkProgressChart.tsx(3,1): error TS6133: 'React' is declared but its value is never read.
+src/components/common/DatePicker.ts(1,10): error TS1484: 'ComponentProps' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/common/DatePicker.ts(1,26): error TS1484: 'ComponentType' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/common/DatePicker.ts(1,41): error TS1484: 'ReactNode' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/common/GenericDownloads.tsx(4,21): error TS1484: 'RowInput' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/common/GenericDownloads.tsx(6,24): error TS7016: Could not find a declaration file for module 'file-saver'. 'C:/Users/hp/Desktop/Code/Yosis/n/pms/pms-frontend-react/node_modules/file-saver/dist/FileSaver.min.js' implicitly has an 'any' type.
+  Try `npm i --save-dev @types/file-saver` if it exists or add a new declaration (.d.ts) file containing `declare module 'file-saver';`
+src/components/common/GenericDownloads.tsx(27,9): error TS6133: 'getTableRows' is declared but its value is never read.
+src/components/common/GenericDownloads.tsx(66,45): error TS2339: Property 'src' does not exist on type 'string'.
+src/components/common/GenericDownloads.tsx(361,26): error TS2339: Property 'src' does not exist on type 'string'.
+src/components/common/GenericFilter.tsx(3,38): error TS1484: 'ChangeEvent' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/common/GenericFilter.tsx(5,3): error TS1484: 'MultiValue' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/common/GenericFilter.tsx(6,3): error TS1484: 'StylesConfig' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/common/GenericFilter.tsx(7,3): error TS1484: 'GroupBase' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/common/GenericFilter.tsx(8,3): error TS1484: 'CSSObjectWithLabel' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/common/GenericFilter.tsx(10,10): error TS1484: 'LucideIcon' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/common/GenericImport.tsx(1,8): error TS6133: 'React' is declared but its value is never read.
+src/components/common/GenericImport.tsx(1,17): error TS1484: 'ChangeEvent' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/common/ProfileAvatar.tsx(1,10): error TS1484: 'User' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/common/ProfileAvatar.tsx(2,1): error TS6133: 'React' is declared but its value is never read.
+src/components/common/ui/WorkspaceDropdown.tsx(1,8): error TS6133: 'React' is declared but its value is never read.
+src/components/common/WorkflowLogTable.tsx(6,10): error TS1484: 'WorkflowLog' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/dashboard/ActualProjectSection.tsx(13,10): error TS1484: 'UpdateProjectInput' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/dashboard/ActualProjectSection.tsx(13,30): error TS1484: 'Project' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/dashboard/ActualProjectSection.tsx(13,39): error TS1484: 'ProjectActuals' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/dashboard/ActualProjectSection.tsx(14,10): error TS1484: 'User' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/dashboard/ActualProjectSection.tsx(17,1): error TS6133: 'ManageProjectForm' is declared but its value is never read.
+src/components/dashboard/ActualProjectSection.tsx(71,10): error TS6133: 'showManageForm' is declared but its value is never read.
+src/components/dashboard/ActualProjectSection.tsx(72,10): error TS6133: 'projectToManage' is declared but its value is never read.
+src/components/dashboard/DashboardStats.tsx(16,10): error TS1484: 'JSX' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/dashboard/DashboardStats.tsx(64,5): error TS6133: 'baseColor' is declared but its value is never read.
+src/components/dashboard/ProjectSection.tsx(14,10): error TS1484: 'Project' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/dashboard/ProjectSection.tsx(14,19): error TS1484: 'UpdateProjectInput' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/dashboard/ProjectSection.tsx(45,10): error TS1484: 'ProgressUpdateItem' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/dashboard/TaskSection.tsx(10,10): error TS1484: 'Task' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/dashboard/TaskSection.tsx(10,16): error TS1484: 'UpdateTaskInput' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/dashboard/TaskSection.tsx(153,9): error TS6133: 'handleManageSubmit' is declared but its value is never read.
+src/components/dashboard/TodosStats.tsx(2,1): error TS6133: 'React' is declared but its value is never read.
+src/components/dashboard/TodosStats.tsx(14,10): error TS1484: 'Todo' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/forms/ActivityForm.tsx(8,10): error TS1484: 'CreateActivityInput' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/forms/ActivityForm.tsx(17,10): error TS1484: 'Role' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/forms/ActivityForm.tsx(17,16): error TS1484: 'User' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/forms/ApprovalForm.tsx(7,10): error TS1484: 'CreateApprovalInput' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/forms/ApprovalForm.tsx(27,9): error TS6133: 'useEthiopianDate' is declared but its value is never read.
+src/components/forms/ChangePasswordForm.tsx(34,16): error TS6133: 'errors' is declared but its value is never read.
+src/components/forms/CollaborationForm.tsx(3,28): error TS6133: 'useState' is declared but its value is never read.
+src/components/forms/DepartmentForm.tsx(7,3): error TS1484: 'CreateDepartmentInput' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/forms/DepartmentForm.tsx(8,3): error TS1484: 'UpdateDepartmentInput' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/forms/DepartmentForm.tsx(9,3): error TS1484: 'Department' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/forms/EditActivityForm.tsx(8,10): error TS1484: 'UpdateActivityInput' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/forms/EditActivityForm.tsx(9,10): error TS1484: 'Role' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/forms/EditActivityForm.tsx(9,16): error TS1484: 'User' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/forms/EditActivityForm.tsx(19,9): error TS6133: 'useEthiopianDate' is declared but its value is never read.
+src/components/forms/EditEquipmentForm.tsx(5,10): error TS1484: 'UpdateEquipmentInput' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/forms/EditIssueForm.tsx(7,10): error TS1484: 'UpdateIssueInput' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/forms/EditIssueForm.tsx(12,10): error TS1484: 'Department' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/forms/EditIssueForm.tsx(13,10): error TS1484: 'Site' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/forms/EditIssueForm.tsx(14,10): error TS1484: 'User' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/forms/EditIssueForm.tsx(32,16): error TS6133: 'errors' is declared but its value is never read.
+src/components/forms/EditKpiForm.tsx(4,17): error TS6133: 'useState' is declared but its value is never read.
+src/components/forms/EditKpiForm.tsx(6,10): error TS1484: 'UpdateKpiInput' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/forms/EditLaborForm.tsx(5,10): error TS1484: 'UpdateLaborInput' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/forms/EditMaterialForm.tsx(5,10): error TS1484: 'UpdateMaterialInput' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/forms/EditProjectForm.tsx(8,10): error TS1484: 'UpdateProjectInput' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/forms/EditProjectForm.tsx(9,10): error TS1484: 'User' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/forms/EditProjectForm.tsx(26,9): error TS6133: 'useEthiopianDate' is declared but its value is never read.
+src/components/forms/EditSiteForm.tsx(5,10): error TS1484: 'UpdateSiteInput' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/forms/EditSiteForm.tsx(5,27): error TS1484: 'Site' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/forms/EditTaskForm.tsx(8,10): error TS1484: 'UpdateTaskInput' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/forms/EditTaskForm.tsx(9,10): error TS1484: 'User' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/forms/EditTaskForm.tsx(25,9): error TS6133: 'useEthiopianDate' is declared but its value is never read.
+src/components/forms/EditTodoForm.tsx(8,10): error TS1484: 'UpdateTodoInput' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/forms/EditTodoForm.tsx(9,10): error TS1484: 'User' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/forms/EditTodoForm.tsx(25,9): error TS6133: 'useEthiopianDate' is declared but its value is never read.
+src/components/forms/EditWarehouseForm.tsx(5,10): error TS1484: 'Warehouse' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/forms/EquipmentForm.tsx(5,10): error TS1484: 'CreateEquipmentInput' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/forms/EquipmentForm.tsx(17,9): error TS6133: 'useEthiopianDate' is declared but its value is never read.
+src/components/forms/finance/BudgetForm.tsx(7,10): error TS1484: 'CreateBudgetInput' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/forms/finance/EditBudgetForm.tsx(7,10): error TS1484: 'UpdateBudgetInput' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/forms/finance/EditInvoiceForm.tsx(9,10): error TS1484: 'UpdateInvoiceInput' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/forms/finance/EditInvoiceForm.tsx(20,9): error TS6133: 'useEthiopianDate' is declared but its value is never read.
+src/components/forms/finance/EditPaymentForm.tsx(9,10): error TS1484: 'UpdatePaymentInput' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/forms/finance/EditPaymentForm.tsx(24,9): error TS6133: 'useEthiopianDate' is declared but its value is never read.
+src/components/forms/finance/EditPayrollForm.tsx(7,10): error TS1484: 'UpdatePayrollInput' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/forms/finance/InvoiceForm.tsx(8,10): error TS1484: 'CreateInvoiceInput' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/forms/finance/InvoiceForm.tsx(20,9): error TS6133: 'useEthiopianDate' is declared but its value is never read.
+src/components/forms/finance/PaymentForm.tsx(9,10): error TS1484: 'CreatePaymentInput' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/forms/finance/PaymentForm.tsx(19,9): error TS6133: 'useEthiopianDate' is declared but its value is never read.
+src/components/forms/finance/PayrollForm.tsx(7,10): error TS1484: 'CreatePayrollInput' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/forms/IssueForm.tsx(6,10): error TS1484: 'CreateIssueInput' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/forms/KpiForm.tsx(5,10): error TS1484: 'CreateKpiInput' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/forms/LaborForm.tsx(5,10): error TS1484: 'CreateLaborInput' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/forms/LaborForm.tsx(17,9): error TS6133: 'useEthiopianDate' is declared but its value is never read.
+src/components/forms/LaborInformationForm.tsx(5,10): error TS1484: 'CreateLaborInput' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/forms/LaborInformationForm.tsx(31,9): error TS6133: 'useEthiopianDate' is declared but its value is never read.
+src/components/forms/ManageActivityForm.tsx(2,10): error TS1484: 'UpdateActivityInput' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/forms/ManageActivityForm.tsx(3,28): error TS6133: 'useMemo' is declared but its value is never read.
+src/components/forms/ManageActivityForm.tsx(23,10): error TS1484: 'ProgressUpdateItem' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/forms/ManageActivityForm.tsx(58,9): error TS6133: 'useEthiopianDate' is declared but its value is never read.
+src/components/forms/ManageActivityForm.tsx(59,11): error TS6133: 'handleSubmit' is declared but its value is never read.
+src/components/forms/ManageProjectForm.tsx(2,10): error TS1484: 'UpdateProjectInput' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/forms/ManageProjectForm.tsx(3,28): error TS6133: 'useMemo' is declared but its value is never read.
+src/components/forms/ManageProjectForm.tsx(23,10): error TS1484: 'ProgressUpdateItem' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/forms/ManageProjectForm.tsx(58,9): error TS6133: 'useEthiopianDate' is declared but its value is never read.
+src/components/forms/ManageProjectForm.tsx(59,11): error TS6133: 'handleSubmit' is declared but its value is never read.
+src/components/forms/ManageTaskForm.tsx(2,10): error TS1484: 'UpdateTaskInput' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/forms/ManageTaskForm.tsx(3,28): error TS6133: 'useMemo' is declared but its value is never read.
+src/components/forms/ManageTaskForm.tsx(23,10): error TS1484: 'ProgressUpdateItem' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/forms/ManageTaskForm.tsx(58,9): error TS6133: 'useEthiopianDate' is declared but its value is never read.
+src/components/forms/ManageTaskForm.tsx(59,11): error TS6133: 'handleSubmit' is declared but its value is never read.
+src/components/forms/ManageTodoForm.tsx(5,10): error TS1484: 'UpdateTodoInput' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/forms/ManageTodoForm.tsx(38,9): error TS6133: 'useEthiopianDate' is declared but its value is never read.
+src/components/forms/MaterialForm.tsx(5,10): error TS1484: 'CreateMaterialInput' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/forms/ProjectForm.tsx(8,10): error TS1484: 'CreateProjectInput' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/forms/ProjectForm.tsx(11,10): error TS1484: 'User' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/forms/ProjectForm.tsx(23,9): error TS6133: 'useEthiopianDate' is declared but its value is never read.
+src/components/forms/RequestDeliverForm.tsx(6,10): error TS1484: 'Approval' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/forms/RequestDeliverForm.tsx(7,10): error TS1484: 'Site' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/forms/RequestDeliverForm.tsx(8,10): error TS1484: 'CreateRequestDeliveryInput' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/forms/RequestDeliverForm.tsx(16,9): error TS6133: 'useEthiopianDate' is declared but its value is never read.
+src/components/forms/resource/DispatchForm.tsx(7,10): error TS1484: 'CreateDispatchInput' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/forms/resource/DispatchForm.tsx(15,10): error TS1484: 'Approval' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/forms/resource/DispatchForm.tsx(16,10): error TS1484: 'Site' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/forms/resource/DispatchForm.tsx(20,3): error TS1484: 'DatePickerValue' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/forms/resource/EditDispatchForm.tsx(8,10): error TS1484: 'UpdateDispatchInput' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/forms/resource/EditDispatchForm.tsx(11,10): error TS1484: 'Approval' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/forms/resource/EditDispatchForm.tsx(12,10): error TS1484: 'Site' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/forms/resource/EditDispatchForm.tsx(26,9): error TS6133: 'useEthiopianDate' is declared but its value is never read.
+src/components/forms/resource/EditDispatchForm.tsx(33,16): error TS6133: 'errors' is declared but its value is never read.
+src/components/forms/resource/EditDispatchForm.tsx(40,16): error TS6133: 'approvalsLoading' is declared but its value is never read.
+src/components/forms/resource/EditDispatchForm.tsx(41,12): error TS6133: 'approvalsError' is declared but its value is never read.
+src/components/forms/resource/EditDispatchForm.tsx(45,16): error TS6133: 'sitesLoading' is declared but its value is never read.
+src/components/forms/resource/EditDispatchForm.tsx(46,12): error TS6133: 'sitesError' is declared but its value is never read.
+src/components/forms/resource/EditRequestDeliveryForm.tsx(8,10): error TS1484: 'UpdateRequestDeliveryInput' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/forms/resource/EditRequestDeliveryForm.tsx(11,10): error TS1484: 'Approval' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/forms/resource/EditRequestDeliveryForm.tsx(12,10): error TS1484: 'Site' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/forms/resource/EditRequestDeliveryForm.tsx(26,9): error TS6133: 'useEthiopianDate' is declared but its value is never read.
+src/components/forms/resource/EditRequestDeliveryForm.tsx(31,16): error TS6133: 'errors' is declared but its value is never read.
+src/components/forms/resource/EditRequestDeliveryForm.tsx(38,16): error TS6133: 'approvalsLoading' is declared but its value is never read.
+src/components/forms/resource/EditRequestDeliveryForm.tsx(39,12): error TS6133: 'approvalsError' is declared but its value is never read.
+src/components/forms/resource/EditRequestDeliveryForm.tsx(43,16): error TS6133: 'sitesLoading' is declared but its value is never read.
+src/components/forms/resource/EditRequestDeliveryForm.tsx(44,12): error TS6133: 'sitesError' is declared but its value is never read.
+src/components/forms/resource/EditStoreRequisitionForm.tsx(6,10): error TS1484: 'UpdateStoreRequisitionInput' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/forms/resource/EditStoreRequisitionForm.tsx(8,10): error TS1484: 'Approval' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/forms/resource/EditStoreRequisitionForm.tsx(25,16): error TS6133: 'errors' is declared but its value is never read.
+src/components/forms/resource/EditStoreRequisitionForm.tsx(32,16): error TS6133: 'approvalsLoading' is declared but its value is never read.
+src/components/forms/resource/EditStoreRequisitionForm.tsx(33,12): error TS6133: 'approvalsError' is declared but its value is never read.
+src/components/forms/resource/StoreRequisitionForm.tsx(7,10): error TS1484: 'CreateStoreRequisitionInput' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/forms/resource/StoreRequisitionForm.tsx(10,10): error TS1484: 'Approval' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/forms/SiteForm.tsx(6,10): error TS1484: 'CreateSiteInput' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/forms/TaskForm.tsx(7,10): error TS1484: 'CreateTaskInput' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/forms/TaskForm.tsx(15,10): error TS1484: 'Role' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/forms/TaskForm.tsx(15,16): error TS1484: 'User' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/forms/TaskForm.tsx(19,3): error TS1484: 'DatePickerValue' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/forms/TaskForm.tsx(19,3): error TS6133: 'DatePickerValue' is declared but its value is never read.
+src/components/forms/timesheet/CreateEquipmentTimesheetForm.tsx(3,10): error TS1484: 'createEquipmentTimesheetInput' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/forms/timesheet/CreateLaborTimesheetForm.tsx(3,10): error TS1484: 'createLaborTimesheetInput' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/forms/timesheet/CreateMaterialSheetForm.tsx(3,10): error TS1484: 'createMaterialBalanceSheetInput' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/forms/timesheet/EditEquipmentTimesheetForm.tsx(4,3): error TS1484: 'updateEquipmentTimesheetInput' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/forms/timesheet/EditEquipmentTimesheetForm.tsx(5,3): error TS1484: 'EquipmentTimesheet' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/forms/timesheet/EditLaborTimesheetForm.tsx(3,10): error TS1484: 'updateLaborTimesheetInput' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/forms/timesheet/EditLaborTimesheetForm.tsx(3,37): error TS1484: 'LaborTimesheet' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/forms/timesheet/EditMaterialSheetForm.tsx(4,3): error TS1484: 'updateMaterialBalanceSheetInput' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/forms/timesheet/EditMaterialSheetForm.tsx(5,3): error TS1484: 'MaterialBalanceSheet' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/forms/TodoForm.tsx(8,10): error TS1484: 'CreateTodoInput' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/forms/TodoForm.tsx(15,10): error TS1484: 'Role' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/forms/TodoForm.tsx(15,16): error TS1484: 'User' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/forms/TodoProgressForm.tsx(5,10): error TS1484: 'CreateTodoProgressInput' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/forms/TodoProgressForm.tsx(5,35): error TS1484: 'TodoProgress' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/forms/UserForm.tsx(9,10): error TS1484: 'CreateUserInput' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/forms/WarehouseForm.tsx(5,10): error TS1484: 'CreateWarehouseInput' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/layout/Footer.tsx(1,1): error TS6133: 'React' is declared but its value is never read.
+src/components/layout/Header.tsx(2,8): error TS6133: 'React' is declared but its value is never read.
+src/components/layout/Navbar.tsx(1,1): error TS6133: 'React' is declared but its value is never read.
+src/components/layout/ProtectedLayout.tsx(1,8): error TS6133: 'React' is declared but its value is never read.
+src/components/master-schedule/ActivityTable.tsx(6,10): error TS1484: 'Activity' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/master-schedule/ActivityTable.tsx(6,20): error TS1484: 'UpdateActivityInput' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/master-schedule/ActivityTable.tsx(11,27): error TS2307: Cannot find module 'next/navigation' or its corresponding type declarations.
+src/components/master-schedule/ActivityTable.tsx(13,18): error TS2307: Cannot find module 'next/link' or its corresponding type declarations.
+src/components/master-schedule/ActivityTable.tsx(17,1): error TS6133: 'User' is declared but its value is never read.
+src/components/master-schedule/ActivityTable.tsx(17,10): error TS1484: 'User' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/master-schedule/ActivityTable.tsx(156,9): error TS6133: 'handleManageSubmit' is declared but its value is never read.
+src/components/master-schedule/ActualActivityTable.tsx(6,27): error TS2307: Cannot find module 'next/navigation' or its corresponding type declarations.
+src/components/master-schedule/ActualActivityTable.tsx(13,10): error TS1484: 'UpdateActivityInput' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/master-schedule/ActualActivityTable.tsx(13,31): error TS1484: 'Activity' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/master-schedule/ActualActivityTable.tsx(13,41): error TS1484: 'Actuals' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/master-schedule/ActualActivityTable.tsx(17,18): error TS2307: Cannot find module 'next/link' or its corresponding type declarations.
+src/components/master-schedule/ActualActivityTable.tsx(627,14): error TS2322: Type '{ children: string; jsx: true; global: true; }' is not assignable to type 'DetailedHTMLProps<StyleHTMLAttributes<HTMLStyleElement>, HTMLStyleElement>'.
+  Property 'jsx' does not exist on type 'DetailedHTMLProps<StyleHTMLAttributes<HTMLStyleElement>, HTMLStyleElement>'.
+src/components/master-schedule/Filters.tsx(3,10): error TS1484: 'Project' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/master-schedule/ProjectGanttChart.tsx(12,10): error TS1484: 'Project' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/master-schedule/ProjectTable.tsx(5,27): error TS2307: Cannot find module 'next/navigation' or its corresponding type declarations.
+src/components/master-schedule/ProjectTable.tsx(6,18): error TS2307: Cannot find module 'next/link' or its corresponding type declarations.
+src/components/master-schedule/ProjectTable.tsx(10,10): error TS1484: 'Project' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/master-schedule/ProjectTable.tsx(10,19): error TS1484: 'UpdateProjectInput' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/master-schedule/ProjectTable.tsx(20,10): error TS1484: 'Task' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/master-schedule/ProjectTable.tsx(140,9): error TS6133: 'handleManageSubmit' is declared but its value is never read.
+src/components/master-schedule/ProjectTableSkeleton.tsx(1,1): error TS6133: 'React' is declared but its value is never read.
+src/components/projects/CollaborationTables.tsx(3,8): error TS6133: 'React' is declared but its value is never read.
+src/components/projects/CollaborationTables.tsx(7,28): error TS1484: 'Column' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/projects/CollaborationTables.tsx(23,3): error TS1484: 'AppDiscussion' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/projects/CollaborationTables.tsx(24,3): error TS1484: 'AppNotification' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/projects/CollaborationTables.tsx(25,3): error TS1484: 'AppActivity' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/projects/CollaborationTables.tsx(52,9): error TS6133: 'createDiscussion' is declared but its value is never read.
+src/components/projects/CollaborationTables.tsx(53,9): error TS6133: 'updateDiscussion' is declared but its value is never read.
+src/components/projects/CollaborationTables.tsx(109,23): error TS6133: 'd' is declared but its value is never read.
+src/components/projects/CollaborationTables.tsx(273,9): error TS6133: 'users' is declared but its value is never read.
+src/components/projects/CollaborationTables.tsx(474,9): error TS6133: 'users' is declared but its value is never read.
+src/components/projects/FilesTab.tsx(3,8): error TS6133: 'React' is declared but its value is never read.
+src/components/projects/FilesTab.tsx(15,10): error TS1484: 'AppFile' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/projects/FilesTab.tsx(16,28): error TS1484: 'Column' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/projects/IssueTab.tsx(2,8): error TS6133: 'React' is declared but its value is never read.
+src/components/projects/IssueTab.tsx(4,10): error TS1484: 'Issue' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/projects/IssueTab.tsx(8,28): error TS1484: 'Column' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/projects/ProjectCard.tsx(12,10): error TS1484: 'Project' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/projects/ProjectCard.tsx(14,49): error TS6133: 'getDuration' is declared but its value is never read.
+src/components/resources/EquipmentTable.tsx(3,10): error TS1484: 'Equipment' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/resources/LaborTable.tsx(2,10): error TS1484: 'Labor' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/resources/MaterialsTable.tsx(2,10): error TS1484: 'Material' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/skeletons/DispatchTableSkeleton.tsx(1,1): error TS6133: 'React' is declared but its value is never read.
+src/components/skeletons/RequestDeliveryTableSkeleton.tsx(1,1): error TS6133: 'React' is declared but its value is never read.
+src/components/tasks/ActualTaskTable.tsx(14,10): error TS1484: 'Task' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/tasks/ActualTaskTable.tsx(14,16): error TS1484: 'UpdateTaskInput' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/tasks/ActualTaskTable.tsx(14,33): error TS1484: 'TaskActuals' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/tasks/ActualTaskTable.tsx(101,9): error TS6133: 'statusBadgeClasses' is declared but its value is never read.
+src/components/tasks/DataTable.tsx(9,10): error TS1484: 'Task' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/tasks/DataTable.tsx(9,16): error TS1484: 'UpdateTaskInput' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/tasks/DataTable.tsx(16,3): error TS1484: 'FilterField' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/tasks/DataTable.tsx(17,3): error TS1484: 'FilterValues' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/tasks/DataTable.tsx(19,3): error TS1484: 'Option' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/todos/TodoCard.tsx(1,1): error TS6133: 'React' is declared but its value is never read.
+src/components/todos/TodoCard.tsx(4,10): error TS1484: 'Todo' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/todos/TodoCard.tsx(5,10): error TS1484: 'Department' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/todos/TodosTable.tsx(6,10): error TS1484: 'Todo' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/todos/TodosTable.tsx(6,16): error TS1484: 'UpdateTodoInput' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/todos/TodosTable.tsx(7,10): error TS1484: 'Department' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/ui/sonner.tsx(4,29): error TS1484: 'ToasterProps' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/warehouse/EquipmentCard.tsx(1,1): error TS6133: 'React' is declared but its value is never read.
+src/components/warehouse/Warehouse.tsx(1,10): error TS1484: 'Material' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/warehouse/WarehouseTable.tsx(2,10): error TS1484: 'Warehouse' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/hooks/useActivities.ts(6,3): error TS1484: 'Activity' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/hooks/useActivities.ts(7,3): error TS1484: 'Actuals' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/hooks/useActivities.ts(8,3): error TS1484: 'CreateActivityInput' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/hooks/useApprovals.ts(5,10): error TS1484: 'Approval' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/hooks/useApprovals.ts(5,20): error TS1484: 'CreateApprovalInput' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/hooks/useApprovals.ts(5,41): error TS1484: 'UpdateApprovalInput' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/hooks/useAuth.ts(5,10): error TS1484: 'UserLogin' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/hooks/useAuth.ts(5,21): error TS1484: 'User' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/hooks/useAuth.ts(5,27): error TS1484: 'CreateUserInput' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/hooks/useChats.ts(5,10): error TS1484: 'ChatRoom' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/hooks/useChats.ts(5,20): error TS1484: 'ChatMessage' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/hooks/useChats.ts(5,33): error TS1484: 'CreateIndividualChatInput' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/hooks/useChats.ts(5,60): error TS1484: 'CreateGroupChatInput' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/hooks/useChats.ts(5,82): error TS1484: 'UpdateGroupChatInput' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/hooks/useChats.ts(5,104): error TS1484: 'AddMembersInput' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/hooks/useChats.ts(5,121): error TS1484: 'SendMessageInput' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/hooks/useChats.ts(267,24): error TS6133: 'id' is declared but its value is never read.
+src/hooks/useCollaborations.ts(6,3): error TS1484: 'AppActivity' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/hooks/useCollaborations.ts(7,3): error TS1484: 'AppDiscussion' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/hooks/useCollaborations.ts(8,3): error TS1484: 'AppNotification' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/hooks/useCollaborations.ts(9,3): error TS1484: 'CreateActivityInput' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/hooks/useCollaborations.ts(10,3): error TS1484: 'CreateDiscussionInput' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/hooks/useCollaborations.ts(11,3): error TS1484: 'CreateNotificationInput' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/hooks/useCollaborations.ts(12,3): error TS1484: 'UpdateActivityInput' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/hooks/useCollaborations.ts(13,3): error TS1484: 'UpdateDiscussionInput' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/hooks/useCollaborations.ts(14,3): error TS1484: 'UpdateNotificationInput' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/hooks/useDepartments.ts(5,10): error TS1484: 'Department' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/hooks/useDepartments.ts(5,22): error TS1484: 'CreateDepartmentInput' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/hooks/useDepartments.ts(5,45): error TS1484: 'UpdateDepartmentInput' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/hooks/useDispatches.ts(5,10): error TS1484: 'Dispatch' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/hooks/useDispatches.ts(5,20): error TS1484: 'CreateDispatchInput' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/hooks/useDispatches.ts(5,41): error TS1484: 'UpdateDispatchInput' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/hooks/useEquipments.ts(5,10): error TS1484: 'Equipment' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/hooks/useEquipments.ts(5,21): error TS1484: 'CreateEquipmentInput' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/hooks/useEquipments.ts(5,43): error TS1484: 'UpdateEquipmentInput' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/hooks/useFiles.ts(5,10): error TS1484: 'AppFile' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/hooks/useFiles.ts(5,19): error TS1484: 'CreateFileInput' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/hooks/useFiles.ts(5,36): error TS1484: 'UpdateFileInput' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/hooks/useFinancials.ts(9,5): error TS1484: 'Invoice' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/hooks/useFinancials.ts(10,5): error TS1484: 'CreateInvoiceInput' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/hooks/useFinancials.ts(11,5): error TS1484: 'UpdateInvoiceInput' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/hooks/useFinancials.ts(12,5): error TS1484: 'Payment' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/hooks/useFinancials.ts(13,5): error TS1484: 'CreatePaymentInput' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/hooks/useFinancials.ts(14,5): error TS1484: 'UpdatePaymentInput' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/hooks/useFinancials.ts(15,5): error TS1484: 'Budget' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/hooks/useFinancials.ts(16,5): error TS1484: 'CreateBudgetInput' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/hooks/useFinancials.ts(17,5): error TS1484: 'UpdateBudgetInput' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/hooks/useFinancials.ts(18,5): error TS1484: 'Payroll' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/hooks/useFinancials.ts(19,5): error TS1484: 'CreatePayrollInput' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/hooks/useFinancials.ts(20,5): error TS1484: 'UpdatePayrollInput' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/hooks/useIssues.ts(6,5): error TS1484: 'Issue' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/hooks/useIssues.ts(7,5): error TS1484: 'CreateIssueInput' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/hooks/useIssues.ts(8,5): error TS1484: 'UpdateIssueInput' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/hooks/useKpis.ts(5,10): error TS1484: 'Kpi' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/hooks/useKpis.ts(5,15): error TS1484: 'CreateKpiInput' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/hooks/useKpis.ts(5,31): error TS1484: 'UpdateKpiInput' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/hooks/useLaborInformations.ts(5,10): error TS1484: 'LaborInformation' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/hooks/useLaborInformations.ts(5,28): error TS1484: 'CreateLaborInformationInput' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/hooks/useLaborInformations.ts(5,57): error TS1484: 'UpdateLaborInformationInput' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/hooks/useLabors.ts(5,10): error TS1484: 'Labor' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/hooks/useLabors.ts(5,17): error TS1484: 'CreateLaborInput' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/hooks/useLabors.ts(5,35): error TS1484: 'UpdateLaborInput' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/hooks/useMaterials.ts(5,10): error TS1484: 'Material' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/hooks/useMaterials.ts(5,20): error TS1484: 'CreateMaterialInput' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/hooks/useMaterials.ts(5,41): error TS1484: 'UpdateMaterialInput' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/hooks/useNotifications.ts(8,5): error TS1484: 'Notification' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/hooks/useNotifications.ts(9,5): error TS1484: 'NotificationCreatePayload' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/hooks/useNotifications.ts(10,5): error TS1484: 'NotificationUpdatePayload' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/hooks/useProjects.ts(6,10): error TS1484: 'Project' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/hooks/useProjects.ts(6,19): error TS1484: 'CreateProjectInput' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/hooks/useProjects.ts(6,39): error TS1484: 'UpdateProjectInput' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/hooks/useRequestDeliveries.ts(5,10): error TS1484: 'RequestDelivery' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/hooks/useRequestDeliveries.ts(5,27): error TS1484: 'CreateRequestDeliveryInput' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/hooks/useRequestDeliveries.ts(5,55): error TS1484: 'UpdateRequestDeliveryInput' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/hooks/useRequests.ts(5,10): error TS1484: 'Request' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/hooks/useRequests.ts(5,19): error TS1484: 'CreateRequestInput' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/hooks/useRequests.ts(5,39): error TS1484: 'UpdateRequestInput' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/hooks/useRoles.ts(3,10): error TS1484: 'Role' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/hooks/useRoles.ts(3,16): error TS1484: 'CreateRoleInput' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/hooks/useRoles.ts(3,33): error TS1484: 'UpdateRoleInput' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/hooks/useSites.ts(5,10): error TS1484: 'CreateSiteInput' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/hooks/useSites.ts(5,27): error TS1484: 'Site' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/hooks/useSites.ts(5,33): error TS1484: 'UpdateSiteInput' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/hooks/useStoreRequisition.ts(6,5): error TS1484: 'StoreRequisition' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/hooks/useStoreRequisition.ts(7,5): error TS1484: 'CreateStoreRequisitionInput' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/hooks/useStoreRequisition.ts(8,5): error TS1484: 'UpdateStoreRequisitionInput' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/hooks/useTags.ts(3,10): error TS1484: 'Tag' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/hooks/useTasks.ts(6,10): error TS1484: 'Task' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/hooks/useTasks.ts(6,16): error TS1484: 'CreateTaskInput' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/hooks/useTasks.ts(6,33): error TS1484: 'UpdateTaskInput' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/hooks/useTimesheets.ts(4,5): error TS1484: 'LaborTimesheet' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/hooks/useTimesheets.ts(5,5): error TS1484: 'createLaborTimesheetInput' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/hooks/useTimesheets.ts(6,5): error TS1484: 'updateLaborTimesheetInput' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/hooks/useTimesheets.ts(7,5): error TS1484: 'EquipmentTimesheet' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/hooks/useTimesheets.ts(8,5): error TS1484: 'createEquipmentTimesheetInput' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/hooks/useTimesheets.ts(9,5): error TS1484: 'updateEquipmentTimesheetInput' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/hooks/useTimesheets.ts(10,5): error TS1484: 'MaterialBalanceSheet' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/hooks/useTimesheets.ts(11,5): error TS1484: 'createMaterialBalanceSheetInput' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/hooks/useTimesheets.ts(12,5): error TS1484: 'updateMaterialBalanceSheetInput' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/hooks/useTodos.ts(5,10): error TS1484: 'Todo' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/hooks/useTodos.ts(5,16): error TS1484: 'CreateTodoInput' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/hooks/useTodos.ts(5,33): error TS1484: 'UpdateTodoInput' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/hooks/useTodos.ts(5,50): error TS1484: 'TodoProgress' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/hooks/useTodos.ts(5,64): error TS1484: 'CreateTodoProgressInput' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/hooks/useUsers.ts(5,10): error TS1484: 'UpdateUserInput' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/hooks/useUsers.ts(5,27): error TS1484: 'User' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/hooks/useWarehouses.ts(5,10): error TS1484: 'Warehouse' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/hooks/useWarehouses.ts(5,21): error TS1484: 'CreateWarehouseInput' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/hooks/useWarehouses.ts(5,43): error TS1484: 'UpdateWarehouseInput' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/hooks/useworkflowLogs.ts(5,10): error TS1484: 'WorkflowLog' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/pages/activities/ActivityDetails.tsx(1,1): error TS6133: 'React' is declared but its value is never read.
+src/pages/activities/index.tsx(1,8): error TS6133: 'React' is declared but its value is never read.
+src/pages/departments/DepartmentsPage.tsx(2,8): error TS6133: 'React' is declared but its value is never read.
+src/pages/departments/DepartmentsPage.tsx(4,10): error TS1484: 'Department' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/pages/departments/DepartmentsPage.tsx(9,1): error TS6133: 'Link' is declared but its value is never read.
+src/pages/departments/DepartmentsPage.tsx(9,18): error TS2307: Cannot find module '@/components/common/ui/Link' or its corresponding type declarations.
+src/pages/finance/Budgets.tsx(1,8): error TS6133: 'React' is declared but its value is never read.
+src/pages/finance/Invoices.tsx(1,8): error TS6133: 'React' is declared but its value is never read.
+src/pages/finance/Payments.tsx(1,8): error TS6133: 'React' is declared but its value is never read.
+src/pages/finance/Payrolls.tsx(1,8): error TS6133: 'React' is declared but its value is never read.
+src/pages/hrm/HrmPage.tsx(106,12): error TS6133: 'sitePage' is declared but its value is never read.
+src/pages/hrm/HrmPage.tsx(525,69): error TS6133: 'entry' is declared but its value is never read.
+src/pages/master-schedule/TaskDetails.tsx(12,23): error TS6133: 'CloudUpload' is declared but its value is never read.
+src/pages/mywarehouse/MyWarehousePage.tsx(8,10): error TS1484: 'Warehouse' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/pages/notifications/NotificationPage.tsx(2,8): error TS6133: 'React' is declared but its value is never read.
+src/pages/profile/ProfilePage.tsx(2,8): error TS6133: 'React' is declared but its value is never read.
+src/pages/projects/FavoriteProjects.tsx(1,1): error TS6133: 'React' is declared but its value is never read.
+src/pages/projects/ProjectDetails.tsx(1,8): error TS6133: 'React' is declared but its value is never read.
+src/pages/requests/index.tsx(2,1): error TS6133: 'Link' is declared but its value is never read.
+src/pages/requests/RequestApproval.tsx(1,8): error TS6133: 'React' is declared but its value is never read.
+src/pages/requests/RequestDeliveryDetails.tsx(1,1): error TS6133: 'React' is declared but its value is never read.
+src/pages/requests/RequestDeliveryDetails.tsx(94,11): error TS6133: 'getStatusIcon' is declared but its value is never read.
+src/pages/requests/RequestDetails.tsx(5,1): error TS6133: 'React' is declared but its value is never read.
+src/pages/settings/LanguageSettings.tsx(2,1): error TS6133: 'React' is declared but its value is never read.
+src/pages/settings/SettingsPage.tsx(2,1): error TS6133: 'React' is declared but its value is never read.
+src/pages/users/UsersPage.tsx(2,8): error TS6133: 'React' is declared but its value is never read.
+src/pages/users/UsersPage.tsx(69,20): error TS6133: 'loadingDepartments' is declared but its value is never read.
+src/pages/users/UsersPage.tsx(74,20): error TS6133: 'loadingRoles' is declared but its value is never read.
+src/pages/users/UsersPage.tsx(79,20): error TS6133: 'loadingSites' is declared but its value is never read.
+src/pages/users/UsersPage.tsx(88,11): error TS6133: 'createUser' is declared but its value is never read.
+src/pages/users/UsersPage.tsx(98,12): error TS6133: 'uploading' is declared but its value is never read.
+src/types/timesheet.ts(1,13): error TS1294: This syntax is not allowed when 'erasableSyntaxOnly' is enabled.
