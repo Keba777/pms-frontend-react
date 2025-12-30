@@ -55,6 +55,13 @@ interface ImportUserRow {
     access?: "Low Access" | "Full Access" | "Average Access";
     status?: "Active" | "InActive";
     responsibilities?: string;
+    username?: string;
+    gender?: string;
+    position?: string;
+    terms?: string;
+    joining_date?: string;
+    est_salary?: number;
+    ot?: number;
 }
 
 const UsersPage = () => {
@@ -110,6 +117,13 @@ const UsersPage = () => {
         status: "Status",
         assigned: "Assigned",
         actions: "Actions",
+        username: "Username",
+        gender: "Gender",
+        position: "Position",
+        terms: "Terms",
+        joiningDate: "Joining Date",
+        estSalary: "Est Salary",
+        ot: "OT",
     };
 
     const [selectedColumns, setSelectedColumns] = useState<string[]>(Object.keys(columnOptions));
@@ -148,6 +162,12 @@ const UsersPage = () => {
             }
             if (filterValues.status && typeof filterValues.status === "string") {
                 ok = ok && (u.status ?? "Active").toLowerCase() === filterValues.status.toLowerCase();
+            }
+            if (filterValues.gender && typeof filterValues.gender === "string") {
+                ok = ok && (u.gender ?? "Male") === filterValues.gender;
+            }
+            if (filterValues.terms && typeof filterValues.terms === "string") {
+                ok = ok && (u.terms ?? "") === filterValues.terms;
             }
             return ok;
         });
@@ -221,6 +241,13 @@ const UsersPage = () => {
         { header: "Tasks Count", accessor: (r) => r.tasks?.length ?? 0 },
         { header: "Activities Count", accessor: (r) => r.activities?.length ?? 0 },
         { header: "Profile Picture", accessor: (r) => r.profile_picture ?? "-" },
+        { header: "Username", accessor: (r) => r.username ?? "-" },
+        { header: "Gender", accessor: (r) => r.gender ?? "-" },
+        { header: "Position", accessor: (r) => r.position ?? "-" },
+        { header: "Terms", accessor: (r) => r.terms ?? "-" },
+        { header: "Joining Date", accessor: (r) => r.joiningDate ? new Date(r.joiningDate).toLocaleDateString() : "-" },
+        { header: "Est Salary", accessor: (r) => r.estSalary ?? "-" },
+        { header: "OT", accessor: (r) => r.ot ?? "-" },
     ];
 
     // === IMPORT COLUMNS ===
@@ -236,6 +263,13 @@ const UsersPage = () => {
         { header: "Permission Level", accessor: "access", type: "string" },
         { header: "Status", accessor: "status", type: "string" },
         { header: "Responsibilities", accessor: "responsibilities", type: "string" },
+        { header: "Username", accessor: "username", type: "string" },
+        { header: "Gender", accessor: "gender", type: "string" },
+        { header: "Position", accessor: "position", type: "string" },
+        { header: "Terms", accessor: "terms", type: "string" },
+        { header: "Joining Date", accessor: "joining_date", type: "string" },
+        { header: "Est Salary", accessor: "est_salary", type: "number" },
+        { header: "OT", accessor: "ot", type: "number" },
     ];
 
     const requiredAccessors: (keyof ImportUserRow)[] = [
@@ -285,7 +319,14 @@ const UsersPage = () => {
                     department_id: departmentId,
                     access: r.access,
                     status: r.status,
-                    responsibilities,
+                    responsiblities: responsibilities,
+                    username: r.username ? r.username.trim().toLowerCase() : undefined,
+                    gender: r.gender,
+                    position: r.position,
+                    terms: r.terms,
+                    joiningDate: r.joining_date ? new Date(r.joining_date) : undefined,
+                    estSalary: r.est_salary ? parseFloat(r.est_salary as any) : undefined,
+                    ot: r.ot ? parseFloat(r.ot as any) : undefined,
                 };
 
                 // Handle profile picture
@@ -321,12 +362,24 @@ const UsersPage = () => {
         { label: "Active", value: "Active" },
         { label: "InActive", value: "InActive" },
     ];
+    const genderOptions: Option<string>[] = [
+        { label: "Male", value: "Male" },
+        { label: "Female", value: "Female" },
+    ];
+    const termsOptions: Option<string>[] = [
+        { label: "Part Time", value: "Part Time" },
+        { label: "Contract", value: "Contract" },
+        { label: "Temporary", value: "Temporary" },
+        { label: "Permanent", value: "Permanent" },
+    ];
 
     const filterFields: FilterField<string>[] = [
         { name: "name", label: "Name", type: "text", placeholder: "Search by name…" },
         { name: "role", label: "Role", type: "select", options: roleOptions, placeholder: "Filter by role" },
         { name: "department", label: "Department", type: "select", options: departmentOptions, placeholder: "Filter by department" },
         { name: "status", label: "Status", type: "select", options: statusOptions, placeholder: "Filter by status" },
+        { name: "gender", label: "Gender", type: "select", options: genderOptions, placeholder: "Filter by gender" },
+        { name: "terms", label: "Terms", type: "select", options: termsOptions, placeholder: "Filter by terms" },
     ];
 
     return (

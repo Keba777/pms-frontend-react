@@ -8,6 +8,7 @@ import Select from "react-select";
 import type { CreateProjectInput } from "@/types/project";
 import { useCreateProject } from "@/hooks/useProjects";
 import { useUsers } from "@/hooks/useUsers";
+import { useClients } from "@/hooks/useClients";
 import type { User } from "@/types/user";
 import { useCreateNotification } from "@/hooks/useNotifications";
 import { useSites } from "@/hooks/useSites";
@@ -34,6 +35,7 @@ const ProjectForm: React.FC<ProjectFormProps> = ({ onClose }) => {
   const { mutate: createNotification } = useCreateNotification();
   const { data: users, isLoading: usersLoading, error: usersError } = useUsers();
   const { data: sites, isLoading: sitesLoading, error: sitesError } = useSites();
+  const { data: clients, isLoading: clientsLoading, error: clientsError } = useClients();
   const [selectedFiles, setSelectedFiles] = useState<File[]>([]);
   const [duration, setDuration] = useState<string>("");
 
@@ -149,6 +151,12 @@ const ProjectForm: React.FC<ProjectFormProps> = ({ onClose }) => {
     sites?.map((site) => ({
       value: site.id!,
       label: site.name,
+    })) || [];
+
+  const clientOptions =
+    clients?.map((client) => ({
+      value: client.id,
+      label: client.companyName,
     })) || [];
 
   // Use EtDatePicker (handled by provider)
@@ -334,18 +342,39 @@ const ProjectForm: React.FC<ProjectFormProps> = ({ onClose }) => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-2">
-              Client
+              Client <span className="text-red-500">*</span>
             </label>
-            <input
-              type="text"
-              {...register("client", { required: "Client is required" })}
-              placeholder="Enter Client Name"
-              className="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-bs-primary"
+            <Controller
+              name="clientId"
+              control={control}
+              rules={{ required: "Client is required" }}
+              render={({ field }) => (
+                <Select
+                  {...field}
+                  options={clientOptions}
+                  isLoading={clientsLoading}
+                  className="w-full"
+                  onChange={(selectedOption) => {
+                    field.onChange(selectedOption?.value);
+                    // Also set the client name for backward compatibility
+                    const selectedClient = clients?.find(c => c.id === selectedOption?.value);
+                    if (selectedClient) {
+                      setValue("client", selectedClient.companyName);
+                    }
+                  }}
+                  value={clientOptions.find(
+                    (option) => option.value === field.value
+                  )}
+                />
+              )}
             />
-            {errors.client && (
+            {errors.clientId && (
               <p className="text-red-500 text-sm mt-1">
-                {errors.client.message}
+                {errors.clientId.message}
               </p>
+            )}
+            {clientsError && (
+              <p className="text-red-500 text-sm mt-1">Error loading clients</p>
             )}
           </div>
 

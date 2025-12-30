@@ -44,6 +44,13 @@ const EditUserForm: React.FC<EditUserFormProps> = ({
       role_id: user.role_id,
       status: user.status,
       responsiblities: user.responsiblities || [],
+      username: user.username,
+      gender: user.gender,
+      position: user.position,
+      terms: user.terms,
+      joiningDate: user.joiningDate,
+      estSalary: user.estSalary,
+      ot: user.ot,
       // profile_picture omitted here
     },
   });
@@ -68,6 +75,18 @@ const EditUserForm: React.FC<EditUserFormProps> = ({
   const statusOptions: Option[] = [
     { value: "Active", label: "Active" },
     { value: "InActive", label: "InActive" },
+  ];
+
+  const genderOptions: Option[] = [
+    { value: "Male", label: "Male" },
+    { value: "Female", label: "Female" },
+  ];
+
+  const termsOptions: Option[] = [
+    { value: "Part Time", label: "Part Time" },
+    { value: "Contract", label: "Contract" },
+    { value: "Temporary", label: "Temporary" },
+    { value: "Permanent", label: "Permanent" },
   ];
 
   // responsibilities
@@ -299,6 +318,96 @@ const EditUserForm: React.FC<EditUserFormProps> = ({
               />
             </div>
           )}
+        />
+      </div>
+
+      {/* Username */}
+      <div>
+        <label className="block text-sm font-medium">Username</label>
+        <input
+          type="text"
+          {...register("username")}
+          placeholder="Enter username"
+          className="w-full border px-3 py-2 rounded"
+        />
+      </div>
+
+      {/* Gender */}
+      <Controller
+        name="gender"
+        control={control}
+        render={({ field }) => (
+          <div>
+            <label className="block text-sm font-medium">Gender</label>
+            <Select
+              {...field}
+              options={genderOptions}
+              onChange={(o) => field.onChange(o?.value)}
+              value={genderOptions.find((o) => o.value === field.value) || null}
+            />
+          </div>
+        )}
+      />
+
+      {/* Position */}
+      <div>
+        <label className="block text-sm font-medium">Position</label>
+        <input
+          type="text"
+          {...register("position")}
+          placeholder="Enter position"
+          className="w-full border px-3 py-2 rounded"
+        />
+      </div>
+
+      {/* Terms */}
+      <Controller
+        name="terms"
+        control={control}
+        render={({ field }) => (
+          <div>
+            <label className="block text-sm font-medium">Terms</label>
+            <Select
+              {...field}
+              options={termsOptions}
+              onChange={(o) => field.onChange(o?.value)}
+              value={termsOptions.find((o) => o.value === field.value) || null}
+            />
+          </div>
+        )}
+      />
+
+      {/* Joining Date */}
+      <div>
+        <label className="block text-sm font-medium">Joining Date</label>
+        <input
+          type="date"
+          {...register("joiningDate")}
+          className="w-full border px-3 py-2 rounded"
+        />
+      </div>
+
+      {/* Estimated Salary */}
+      <div>
+        <label className="block text-sm font-medium">Estimated Salary</label>
+        <input
+          type="number"
+          step="0.01"
+          {...register("estSalary", { valueAsNumber: true })}
+          placeholder="Enter estimated salary"
+          className="w-full border px-3 py-2 rounded"
+        />
+      </div>
+
+      {/* OT (Overtime) */}
+      <div>
+        <label className="block text-sm font-medium">Overtime (OT)</label>
+        <input
+          type="number"
+          step="0.01"
+          {...register("ot", { valueAsNumber: true })}
+          placeholder="Enter overtime hours"
+          className="w-full border px-3 py-2 rounded"
         />
       </div>
 

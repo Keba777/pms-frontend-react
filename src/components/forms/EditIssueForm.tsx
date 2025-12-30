@@ -9,13 +9,14 @@ import { useDepartments } from "@/hooks/useDepartments";
 import { useSites } from "@/hooks/useSites";
 import { useUsers } from "@/hooks/useUsers";
 import Select from "react-select";
+import { useUpdateIssue } from "@/hooks/useIssues";
 import type { Department } from "@/types/department";
 import type { Site } from "@/types/site";
 import type { User } from "@/types/user";
 import { normalizeDatePickerValue } from "@/utils/datePicker";
 
 interface EditIssueFormProps {
-  onSubmit: (data: UpdateIssueInput) => void;
+  onSubmit?: (data: UpdateIssueInput) => void;
   onClose: () => void;
   issue: UpdateIssueInput;
 }
@@ -36,6 +37,7 @@ const EditIssueForm: React.FC<EditIssueFormProps> = ({
   const { data: departments } = useDepartments();
   const { data: sites } = useSites();
   const { data: users } = useUsers();
+  const { mutate: updateIssue } = useUpdateIssue();
 
   const departmentOptions = departments?.map((dept: Department) => ({
     value: dept.id,
@@ -65,9 +67,21 @@ const EditIssueForm: React.FC<EditIssueFormProps> = ({
     { value: "Closed", label: "Closed" },
   ];
 
+  const handleFormSubmit = (data: UpdateIssueInput) => {
+    if (onSubmit) {
+      onSubmit(data);
+    } else {
+      updateIssue(data, {
+        onSuccess: () => {
+          onClose();
+        },
+      });
+    }
+  };
+
   return (
     <form
-      onSubmit={handleSubmit(onSubmit)}
+      onSubmit={handleSubmit(handleFormSubmit)}
       className="bg-white rounded-lg shadow-xl p-6 space-y-4"
     >
       <div className="flex justify-between items-center border-b pb-2 mb-4">

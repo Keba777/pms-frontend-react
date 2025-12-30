@@ -8,7 +8,11 @@ import Select, {
   type GroupBase,
   type CSSObjectWithLabel,
 } from "react-select";
-import type { LucideIcon } from "lucide-react";
+
+import type { ComponentType, SVGProps } from 'react';
+
+// Define LucideIcon locally since the package types are missing/broken in this environment
+type LucideIcon = ComponentType<SVGProps<SVGSVGElement> & { size?: string | number; absoluteStrokeWidth?: boolean }>;
 
 export interface Option<T = unknown> {
   label: string;

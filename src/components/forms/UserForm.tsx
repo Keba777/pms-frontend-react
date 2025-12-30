@@ -65,8 +65,30 @@ const UserForm: React.FC<UserFormProps> = ({ onClose }) => {
     { value: "InActive", label: "InActive" },
   ];
 
+  const genderOptions: SelectOption[] = [
+    { value: "Male", label: "Male" },
+    { value: "Female", label: "Female" },
+  ];
+
+  const termsOptions: SelectOption[] = [
+    { value: "Part Time", label: "Part Time" },
+    { value: "Contract", label: "Contract" },
+    { value: "Temporary", label: "Temporary" },
+    { value: "Permanent", label: "Permanent" },
+  ];
+
   const [responsibilityInput, setResponsibilityInput] = useState("");
   const responsibilities = watch("responsiblities");
+  const [selectedFile, setSelectedFile] = useState<File | null>(null);
+  const [previewUrl, setPreviewUrl] = useState<string | null>(null);
+
+  const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const file = event.target.files?.[0];
+    if (file) {
+      setSelectedFile(file);
+      setPreviewUrl(URL.createObjectURL(file));
+    }
+  };
 
   const addResponsibility = () => {
     if (responsibilityInput.trim() !== "") {
@@ -83,12 +105,39 @@ const UserForm: React.FC<UserFormProps> = ({ onClose }) => {
   };
 
   const onSubmit = (data: CreateUserInput) => {
-    createUser(data, {
-      onSuccess: () => {
-        onClose();
-        window.location.reload();
-      },
-    });
+    // If there's a file, create FormData
+    if (selectedFile) {
+      const formData = new FormData();
+
+      // Append all form fields
+      Object.entries(data).forEach(([key, value]) => {
+        if (value != null) {
+          if (Array.isArray(value)) {
+            value.forEach((item) => formData.append(`${key}[]`, item));
+          } else {
+            formData.append(key, String(value));
+          }
+        }
+      });
+
+      // Append the profile picture file
+      formData.append("profile_picture", selectedFile);
+
+      createUser(formData as any, {
+        onSuccess: () => {
+          onClose();
+          window.location.reload();
+        },
+      });
+    } else {
+      // No file, submit as regular JSON
+      createUser(data, {
+        onSuccess: () => {
+          onClose();
+          window.location.reload();
+        },
+      });
+    }
   };
 
   return (
@@ -108,6 +157,28 @@ const UserForm: React.FC<UserFormProps> = ({ onClose }) => {
       </div>
 
       <div className="space-y-4">
+        {/* Profile Picture */}
+        <div>
+          <label className="block text-sm font-medium text-gray-700 mb-1">
+            Profile Picture
+          </label>
+          {previewUrl && (
+            <img
+              src={previewUrl}
+              alt="Preview"
+              width={96}
+              height={96}
+              className="rounded-full mb-2 object-cover"
+            />
+          )}
+          <input
+            type="file"
+            accept="image/*"
+            onChange={handleFileChange}
+            className="w-full px-3 py-2 border rounded-md"
+          />
+        </div>
+
         {/* First Name */}
         <div>
           <label className="block text-sm font-medium text-gray-700 mb-1">
@@ -301,6 +372,108 @@ const UserForm: React.FC<UserFormProps> = ({ onClose }) => {
               )}
             />
           </div>
+        </div>
+
+        {/* Username */}
+        <div>
+          <label className="block text-sm font-medium text-gray-700 mb-1">
+            Username
+          </label>
+          <input
+            type="text"
+            {...register("username")}
+            placeholder="Enter username (optional, auto-generated if blank)"
+            className="w-full px-3 py-2 border rounded-md"
+          />
+        </div>
+
+        {/* Gender */}
+        <div>
+          <label className="block text-sm font-medium text-gray-700 mb-1">
+            Gender
+          </label>
+          <Controller
+            name="gender"
+            control={control}
+            render={({ field }) => (
+              <Select
+                options={genderOptions}
+                onChange={(opt) => field.onChange(opt?.value)}
+                value={genderOptions.find((opt) => opt.value === field.value) || null}
+              />
+            )}
+          />
+        </div>
+
+        {/* Position */}
+        <div>
+          <label className="block text-sm font-medium text-gray-700 mb-1">
+            Position
+          </label>
+          <input
+            type="text"
+            {...register("position")}
+            placeholder="Enter position"
+            className="w-full px-3 py-2 border rounded-md"
+          />
+        </div>
+
+        {/* Terms */}
+        <div>
+          <label className="block text-sm font-medium text-gray-700 mb-1">
+            Terms
+          </label>
+          <Controller
+            name="terms"
+            control={control}
+            render={({ field }) => (
+              <Select
+                options={termsOptions}
+                onChange={(opt) => field.onChange(opt?.value)}
+                value={termsOptions.find((opt) => opt.value === field.value) || null}
+              />
+            )}
+          />
+        </div>
+
+        {/* Joining Date */}
+        <div>
+          <label className="block text-sm font-medium text-gray-700 mb-1">
+            Joining Date
+          </label>
+          <input
+            type="date"
+            {...register("joiningDate")}
+            className="w-full px-3 py-2 border rounded-md"
+          />
+        </div>
+
+        {/* Estimated Salary */}
+        <div>
+          <label className="block text-sm font-medium text-gray-700 mb-1">
+            Estimated Salary
+          </label>
+          <input
+            type="number"
+            step="0.01"
+            {...register("estSalary", { valueAsNumber: true })}
+            placeholder="Enter estimated salary"
+            className="w-full px-3 py-2 border rounded-md"
+          />
+        </div>
+
+        {/* OT (Overtime) */}
+        <div>
+          <label className="block text-sm font-medium text-gray-700 mb-1">
+            Overtime (OT)
+          </label>
+          <input
+            type="number"
+            step="0.01"
+            {...register("ot", { valueAsNumber: true })}
+            placeholder="Enter overtime hours"
+            className="w-full px-3 py-2 border rounded-md"
+          />
         </div>
 
         {/* Manual Responsibilities Input */}

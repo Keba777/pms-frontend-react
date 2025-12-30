@@ -8,6 +8,7 @@ import { Info } from "lucide-react";
 import type { UpdateProjectInput } from "@/types/project";
 import type { User } from "@/types/user";
 import { useSites } from "@/hooks/useSites";
+import { useClients } from "@/hooks/useClients";
 import { useSettingsStore } from "@/store/settingsStore";
 
 interface EditProjectFormProps {
@@ -28,11 +29,13 @@ const EditProjectForm: React.FC<EditProjectFormProps> = ({
     register,
     handleSubmit,
     control,
+    setValue,
     formState: { errors },
   } = useForm<UpdateProjectInput>({
     defaultValues: project,
   });
   const { data: sites, isLoading: sitesLoading, error: sitesError } = useSites();
+  const { data: clients, isLoading: clientsLoading, error: clientsError } = useClients();
 
   const statusOptions = [
     { value: "Not Started", label: "Not Started" },
@@ -60,6 +63,12 @@ const EditProjectForm: React.FC<EditProjectFormProps> = ({
     sites?.map((site) => ({
       value: site.id,
       label: site.name,
+    })) || [];
+
+  const clientOptions =
+    clients?.map((client) => ({
+      value: client.id,
+      label: client.companyName,
     })) || [];
 
   return (
@@ -239,17 +248,39 @@ const EditProjectForm: React.FC<EditProjectFormProps> = ({
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-2">
-              Client
+              Client <span className="text-red-500">*</span>
             </label>
-            <input
-              type="text"
-              {...register("client", { required: "Client is required" })}
-              className="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-bs-primary"
+            <Controller
+              name="clientId"
+              control={control}
+              rules={{ required: "Client is required" }}
+              render={({ field }) => (
+                <Select
+                  {...field}
+                  options={clientOptions}
+                  isLoading={clientsLoading}
+                  className="w-full text-sm"
+                  onChange={(selectedOption) => {
+                    field.onChange(selectedOption?.value);
+                    // Also set the client name for backward compatibility
+                    const selectedClient = clients?.find(c => c.id === selectedOption?.value);
+                    if (selectedClient) {
+                      setValue("client", selectedClient.companyName);
+                    }
+                  }}
+                  value={clientOptions.find(
+                    (option) => option.value === field.value
+                  )}
+                />
+              )}
             />
-            {errors.client && (
+            {errors.clientId && (
               <p className="text-red-500 text-sm mt-1">
-                {errors.client.message}
+                {errors.clientId.message}
               </p>
+            )}
+            {clientsError && (
+              <p className="text-red-500 text-sm mt-1">Error loading clients</p>
             )}
           </div>
 

@@ -28,6 +28,7 @@ export interface Project {
   end_date: Date;
   budget: number;
   client: string;
+  clientId?: string;
   site_id?: string;
   site?: Site;
   projectSite?: Site;
@@ -52,6 +53,7 @@ export interface CreateProjectInput {
   budget: number;
   progress?: number;
   client: string;
+  clientId?: string;
   site_id?: string;
   status: ProjectStatus;
   members?: string[];
@@ -68,6 +70,7 @@ export interface UpdateProjectInput {
   end_date?: Date;
   budget?: number;
   client?: string;
+  clientId?: string;
   site_id?: string;
   progress?: number;
   isFavourite?: boolean;

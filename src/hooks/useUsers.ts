@@ -33,8 +33,17 @@ const fetchUserById = async (id: string): Promise<User | null> => {
     }
 };
 
-// Create a new user
-const createUser = async (data: Omit<User, "id">): Promise<User> => {
+// Create a new user (supports FormData or JSON)
+const createUser = async (data: Omit<User, "id"> | FormData): Promise<User> => {
+    // If it's FormData, send with multipart headers
+    if (data instanceof FormData) {
+        const response = await apiClient.post<ApiResponse<User>>("/users", data, {
+            headers: { "Content-Type": "multipart/form-data" },
+        });
+        return response.data.data;
+    }
+
+    // Otherwise send as JSON
     const response = await apiClient.post<ApiResponse<User>>("/users", data);
     return response.data.data;
 };

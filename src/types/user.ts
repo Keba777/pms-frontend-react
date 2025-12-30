@@ -21,6 +21,13 @@ export interface User {
     site?: Site
     responsiblities?: string[]
     access?: "Low Access" | "Full Access" | "Average Access";
+    username?: string;
+    gender?: 'Male' | 'Female';
+    position?: string;
+    terms?: 'Part Time' | 'Contract' | 'Temporary' | 'Permanent';
+    joiningDate?: Date;
+    estSalary?: number;
+    ot?: number;
     status?: "Active" | "InActive";
     projects?: Project[];
     tasks?: Task[];
@@ -41,6 +48,13 @@ export interface CreateUserInput {
     siteId: string;
     responsiblities?: string[]
     access?: "Low Access" | "Full Access" | "Average Access";
+    username?: string;
+    gender?: 'Male' | 'Female';
+    position?: string;
+    terms?: 'Part Time' | 'Contract' | 'Temporary' | 'Permanent';
+    joiningDate?: Date;
+    estSalary?: number;
+    ot?: number;
 }
 
 export interface UpdateUserInput {
@@ -57,6 +71,13 @@ export interface UpdateUserInput {
     siteId?: string;
     responsiblities?: string[]
     access?: "Low Access" | "Full Access" | "Average Access";
+    username?: string;
+    gender?: 'Male' | 'Female';
+    position?: string;
+    terms?: 'Part Time' | 'Contract' | 'Temporary' | 'Permanent';
+    joiningDate?: Date;
+    estSalary?: number;
+    ot?: number;
 }
 
 export type PermissionActions = "create" | "update" | "delete" | "manage";
