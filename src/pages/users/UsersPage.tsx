@@ -319,7 +319,7 @@ const UsersPage = () => {
                     department_id: departmentId,
                     access: r.access,
                     status: r.status,
-                    responsiblities: responsibilities,
+                    responsibilities: responsibilities,
                     username: r.username ? r.username.trim().toLowerCase() : undefined,
                     gender: r.gender,
                     position: r.position,

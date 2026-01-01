@@ -28,7 +28,7 @@ const UserForm: React.FC<UserFormProps> = ({ onClose }) => {
     watch,
   } = useForm<CreateUserInput>({
     defaultValues: {
-      responsiblities: [],
+      responsibilities: [],
     },
   });
 
@@ -78,7 +78,7 @@ const UserForm: React.FC<UserFormProps> = ({ onClose }) => {
   ];
 
   const [responsibilityInput, setResponsibilityInput] = useState("");
-  const responsibilities = watch("responsiblities");
+  const responsibilities = watch("responsibilities");
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [previewUrl, setPreviewUrl] = useState<string | null>(null);
 
@@ -93,7 +93,7 @@ const UserForm: React.FC<UserFormProps> = ({ onClose }) => {
   const addResponsibility = () => {
     if (responsibilityInput.trim() !== "") {
       const updated = [...(responsibilities || []), responsibilityInput.trim()];
-      setValue("responsiblities", updated);
+      setValue("responsibilities", updated);
       setResponsibilityInput("");
     }
   };
@@ -101,7 +101,7 @@ const UserForm: React.FC<UserFormProps> = ({ onClose }) => {
   const removeResponsibility = (index: number) => {
     const updated = [...(responsibilities || [])];
     updated.splice(index, 1);
-    setValue("responsiblities", updated);
+    setValue("responsibilities", updated);
   };
 
   const onSubmit = (data: CreateUserInput) => {
